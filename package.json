@@ -1,0 +1,41 @@
+{
+  "name": "isunfa",
+  "version": "0.8.0",
+  "description": "Blockchain and Artificial Intelligence Forensic Accounting Desktop Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --trace-warnings",
+    "build": "electron-builder"
+  },
+  "build": {
+    "extraResources": [
+      "./extra/**"
+    ],
+    "win": {
+      "target": {
+        "target": "nsis",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      },
+      "icon": "assets/icon.png"
+    },
+    "mac": {
+      "icon": "assets/icon.png"
+    },
+    "linux": {
+      "icon": "assets/icon.png"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}
