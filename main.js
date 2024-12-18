@@ -14,16 +14,20 @@ const homeDir = app.getPath('home');
 
 const createWindow = async () => {
   mainWindow = new BrowserWindow({
+    // fullscreen: true,
+    // frame: false,
+    resizable: false,
     width: 1440,
     height: 900,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
+      devTools: false,
     },
     icon: path.join(__dirname, 'assets', 'icon.png'),
   });
 
-  mainWindow.loadURL('https://isunfa.com/users/login');
+  mainWindow.loadURL('https://isunfa.tw/users/login');
   mainWindow.on('closed', () => {
     mainWindow = null;
     app.quit();
